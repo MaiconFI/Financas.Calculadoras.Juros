@@ -27,20 +27,20 @@ namespace Financas.Calculadoras.Juros.Domain
 
         private void ValidarMeses(decimal meses)
         {
-            if (meses < default(decimal))
-                throw new ArgumentException("A quantidade de meses deve ser maior quer zero.");
+            if (meses <= default(decimal))
+                AddError("A quantidade de meses deve ser maior quer zero.");
         }
 
         private void ValidarTaxaDeJuros(decimal taxaDeJuros)
         {
             if (taxaDeJuros < default(decimal))
-                throw new ArgumentException("A taxa de juros deve ser maior que zero.");
+                AddError("A taxa de juros deve ser maior ou igual a zero.");
         }
 
         private void ValidarValorInicial(decimal valorInicial)
         {
-            if (valorInicial < default(decimal))
-                throw new ArgumentException("O valor inicial deve ser maior quer zero.");
+            if (valorInicial <= default(decimal))
+                AddError("O valor inicial deve ser maior quer zero.");
         }
     }
 }
