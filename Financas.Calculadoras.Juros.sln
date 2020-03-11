@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Calculadoras.Juros.Api", "src\Financas.Calculadoras.Juros.Api\Financas.Calculadoras.Juros.Api.csproj", "{E7FF8057-90BF-4860-AA84-16A5D4D90227}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B9A2DA23-3F63-4DCD-A29C-AB915EA30EC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1EB01CB8-745B-46E4-AF15-978E6E38EB6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Domain", "src\Financas.Calculadoras.Juros.Domain\Financas.Calculadoras.Juros.Domain.csproj", "{C0A256E8-4934-4159-8823-0BA6EFBF4727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Queries", "Financas.Calculadoras.Juros.Queries\Financas.Calculadoras.Juros.Queries.csproj", "{05A6560A-AF16-4227-AC30-A4A380BF795E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Api.IntegrationTests", "tests\Financas.Calculadoras.Juros.Api.IntegrationTests\Financas.Calculadoras.Juros.Api.IntegrationTests.csproj", "{5D621691-1BAC-4CD5-9E08-4292C75D29E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Domain.Tests", "tests\Financas.Calculadoras.Juros.Domain.Tests\Financas.Calculadoras.Juros.Domain.Tests.csproj", "{CC529874-3A2C-4EA3-8765-AF868BD1FA5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Queries.Tests", "src\Financas.Calculadoras.Juros.Queries.Tests\Financas.Calculadoras.Juros.Queries.Tests.csproj", "{EDCF3D46-33C5-4974-9611-DF739F66BF8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7FF8057-90BF-4860-AA84-16A5D4D90227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7FF8057-90BF-4860-AA84-16A5D4D90227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7FF8057-90BF-4860-AA84-16A5D4D90227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7FF8057-90BF-4860-AA84-16A5D4D90227}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0A256E8-4934-4159-8823-0BA6EFBF4727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0A256E8-4934-4159-8823-0BA6EFBF4727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0A256E8-4934-4159-8823-0BA6EFBF4727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0A256E8-4934-4159-8823-0BA6EFBF4727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A6560A-AF16-4227-AC30-A4A380BF795E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A6560A-AF16-4227-AC30-A4A380BF795E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A6560A-AF16-4227-AC30-A4A380BF795E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A6560A-AF16-4227-AC30-A4A380BF795E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D621691-1BAC-4CD5-9E08-4292C75D29E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D621691-1BAC-4CD5-9E08-4292C75D29E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D621691-1BAC-4CD5-9E08-4292C75D29E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D621691-1BAC-4CD5-9E08-4292C75D29E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC529874-3A2C-4EA3-8765-AF868BD1FA5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC529874-3A2C-4EA3-8765-AF868BD1FA5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC529874-3A2C-4EA3-8765-AF868BD1FA5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC529874-3A2C-4EA3-8765-AF868BD1FA5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDCF3D46-33C5-4974-9611-DF739F66BF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCF3D46-33C5-4974-9611-DF739F66BF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCF3D46-33C5-4974-9611-DF739F66BF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCF3D46-33C5-4974-9611-DF739F66BF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7FF8057-90BF-4860-AA84-16A5D4D90227} = {B9A2DA23-3F63-4DCD-A29C-AB915EA30EC8}
+		{C0A256E8-4934-4159-8823-0BA6EFBF4727} = {B9A2DA23-3F63-4DCD-A29C-AB915EA30EC8}
+		{05A6560A-AF16-4227-AC30-A4A380BF795E} = {B9A2DA23-3F63-4DCD-A29C-AB915EA30EC8}
+		{5D621691-1BAC-4CD5-9E08-4292C75D29E6} = {1EB01CB8-745B-46E4-AF15-978E6E38EB6E}
+		{CC529874-3A2C-4EA3-8765-AF868BD1FA5A} = {1EB01CB8-745B-46E4-AF15-978E6E38EB6E}
+		{EDCF3D46-33C5-4974-9611-DF739F66BF8B} = {1EB01CB8-745B-46E4-AF15-978E6E38EB6E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A120E69D-CB3E-4DC7-83F0-5F9F1882D0BB}
+	EndGlobalSection
+EndGlobal
