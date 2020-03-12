@@ -4,6 +4,8 @@ namespace Financas.Calculadoras.Juros.Domain
 {
     public abstract class Calculadora : BaseDomain
     {
-        public abstract decimal Calcular();
+        public decimal Resultado { get; protected set; }
+
+        public abstract void Calcular();
     }
 }

@@ -9,9 +9,9 @@ namespace Financas.Calculadoras.Juros.Domain.Tests
         {
             var resultadoEsperado = 105.10M;
             var calculadoraDeJuros = new CalculadoraDeJuros(valorInicial: 100, meses: 5, taxaDeJuros: 0.01M);
-            var resultado = calculadoraDeJuros.Calcular();
+            calculadoraDeJuros.Calcular();
 
-            Assert.Equal(resultadoEsperado, resultado);
+            Assert.Equal(resultadoEsperado, calculadoraDeJuros.Resultado);
         }
 
         [Fact]

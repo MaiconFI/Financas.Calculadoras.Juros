@@ -4,7 +4,7 @@ namespace Financas.Calculadoras.Juros.Domain.Base
 {
     public abstract class BaseDomain : BaseError
     {
-        public BaseDomain()
+        protected BaseDomain()
         {
             Id = Guid.NewGuid();
         }

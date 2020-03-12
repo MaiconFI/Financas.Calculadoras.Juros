@@ -19,10 +19,10 @@ namespace Financas.Calculadoras.Juros.Domain
         public decimal TaxaDeJuros { get; private set; }
         public decimal ValorInicial { get; private set; }
 
-        public override decimal Calcular()
+        public override void Calcular()
         {
             var valorFinal = ValorInicial * (decimal)Math.Pow((double)(1 + TaxaDeJuros), Meses);
-            return decimal.Parse(valorFinal.ToString("##.00"));
+            Resultado = decimal.Parse(valorFinal.ToString("##.00"));
         }
 
         private void ValidarMeses(decimal meses)
