@@ -10,7 +10,7 @@ namespace Financas.Calculadoras.Juros.Clients
     public class TaxaDeJurosClient : BaseClient, ITaxaDeJurosClient
     {
         public TaxaDeJurosClient(IHttpClientFactory httpClientFactory)
-            : base(httpClientFactory, "TaxaDeJuros")
+            : base(httpClientFactory, "TaxaDeJurosV1")
         {
         }
 

@@ -1,7 +1,6 @@
 ﻿using Financas.Calculadoras.Juros.Dtos.Base;
 using System;
 using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -50,9 +49,7 @@ namespace Financas.Calculadoras.Juros.Clients.Base
         private HttpClient GetClient()
         {
             var client = _httpClientFactory.CreateClient(_name);
-            client.Timeout = TimeSpan.FromSeconds(180);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.Timeout = TimeSpan.FromSeconds(5);
 
             return client;
         }
