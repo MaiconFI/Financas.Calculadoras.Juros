@@ -1,5 +1,4 @@
 ﻿using Financas.Calculadoras.Juros.Dtos.CalculoDeJuros;
-using System.Net;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Xunit;
@@ -28,7 +27,6 @@ namespace Financas.Calculadoras.Juros.Api.IntegrationTests
             var resultado = JsonSerializer.Deserialize<CalculoDeJurosDto>(xpto);
 
             Assert.Equal(resultadoEsperado.Resultado, resultado.Resultado);
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }
