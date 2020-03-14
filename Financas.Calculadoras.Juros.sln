@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Calculadoras.Juros
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Calculadoras.Juros.Queries.Tests", "tests\Financas.Calculadoras.Juros.Queries.Tests\Financas.Calculadoras.Juros.Queries.Tests.csproj", "{EDCF3D46-33C5-4974-9611-DF739F66BF8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Dtos", "src\Financas.Calculadoras.Juros.Dtos\Financas.Calculadoras.Juros.Dtos.csproj", "{25287FF6-0568-4CF0-B6BD-07F15B55D03C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Calculadoras.Juros.Dtos", "src\Financas.Calculadoras.Juros.Dtos\Financas.Calculadoras.Juros.Dtos.csproj", "{25287FF6-0568-4CF0-B6BD-07F15B55D03C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Financas.Calculadoras.Juros.Clients", "src\Financas.Calculadoras.Juros.Clients\Financas.Calculadoras.Juros.Clients.csproj", "{2118B6AB-F7F3-412A-8CD0-A0A398B43598}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Financas.Calculadoras.Juros.Clients", "src\Financas.Calculadoras.Juros.Clients\Financas.Calculadoras.Juros.Clients.csproj", "{2118B6AB-F7F3-412A-8CD0-A0A398B43598}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3154CCE1-B83D-4E63-82CE-1EBE94419DA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{2118B6AB-F7F3-412A-8CD0-A0A398B43598}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2118B6AB-F7F3-412A-8CD0-A0A398B43598}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2118B6AB-F7F3-412A-8CD0-A0A398B43598}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3154CCE1-B83D-4E63-82CE-1EBE94419DA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3154CCE1-B83D-4E63-82CE-1EBE94419DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3154CCE1-B83D-4E63-82CE-1EBE94419DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3154CCE1-B83D-4E63-82CE-1EBE94419DA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

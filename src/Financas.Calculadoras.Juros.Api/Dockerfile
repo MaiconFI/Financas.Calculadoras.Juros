@@ -7,10 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["Financas.Calculadoras.Juros.Api/Financas.Calculadoras.Juros.Api.csproj", "Financas.Calculadoras.Juros.Api/"]
-RUN dotnet restore "Financas.Calculadoras.Juros.Api/Financas.Calculadoras.Juros.Api.csproj"
+COPY ["src/Financas.Calculadoras.Juros.Api/Financas.Calculadoras.Juros.Api.csproj", "src/Financas.Calculadoras.Juros.Api/"]
+COPY ["src/Financas.Calculadoras.Juros.Dtos/Financas.Calculadoras.Juros.Dtos.csproj", "src/Financas.Calculadoras.Juros.Dtos/"]
+COPY ["src/Financas.Calculadoras.Juros.Queries/Financas.Calculadoras.Juros.Queries.csproj", "src/Financas.Calculadoras.Juros.Queries/"]
+COPY ["src/Financas.Calculadoras.Juros.Clients/Financas.Calculadoras.Juros.Clients.csproj", "src/Financas.Calculadoras.Juros.Clients/"]
+COPY ["src/Financas.Calculadoras.Juros.Domain/Financas.Calculadoras.Juros.Domain.csproj", "src/Financas.Calculadoras.Juros.Domain/"]
+RUN dotnet restore "src/Financas.Calculadoras.Juros.Api/Financas.Calculadoras.Juros.Api.csproj"
 COPY . .
-WORKDIR "/src/Financas.Calculadoras.Juros.Api"
+WORKDIR "/src/src/Financas.Calculadoras.Juros.Api"
 RUN dotnet build "Financas.Calculadoras.Juros.Api.csproj" -c Release -o /app/build
 
 FROM build AS publish

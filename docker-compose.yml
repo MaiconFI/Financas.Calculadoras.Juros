@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  financas.calculadoras.juros.api:
+    image: ${DOCKER_REGISTRY-}financascalculadorasjurosapi
+    build:
+      context: .
+      dockerfile: src/Financas.Calculadoras.Juros.Api/Dockerfile
