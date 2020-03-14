@@ -90,8 +90,8 @@ namespace Financas.Calculadoras.Juros.Api
                 }
             });
 
-            services.AddHttpClient("TaxaDeJurosV1", c => { c.BaseAddress = new Uri(_configuration["UrlDaApiDeTaxasDeJurosV1"]); });
-            //.AddPolicyHandler(GetRetryPolicy());
+            services.AddHttpClient("TaxaDeJurosV1", c => { c.BaseAddress = new Uri(_configuration["UrlDaApiDeTaxasDeJurosV1"]); })
+                .AddPolicyHandler(GetRetryPolicy());
 
             var mappingConfig = new MapperConfiguration(mc =>
             {

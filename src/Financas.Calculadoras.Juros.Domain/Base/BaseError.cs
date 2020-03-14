@@ -16,6 +16,11 @@ namespace Financas.Calculadoras.Juros.Domain.Base
 
         public void AddError(string error) => Errors.Add(error);
 
+        public void AddError(IEnumerable<string> errors)
+        {
+            foreach (var error in errors) AddError(error);
+        }
+
         public bool IsValid() => !Errors.Any();
     }
 }

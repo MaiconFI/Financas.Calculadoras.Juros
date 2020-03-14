@@ -23,6 +23,9 @@ namespace Financas.Calculadoras.Juros.Queries.CalculoDeJuros
         public async Task<CalculoDeJurosDto> Handle(CalcularJurosQuery request, CancellationToken cancellationToken)
         {
             var taxaDeJurosDto = await _mediator.Send(new TaxaDeJurosQuery(), cancellationToken);
+            if (!taxaDeJurosDto.IsValid())
+                return _mapper.Map<CalculoDeJurosDto>(taxaDeJurosDto);
+
             var calculadoraDeJuros = new CalculadoraDeJuros(request.ValorInicial, request.Meses, taxaDeJurosDto.Valor);
             calculadoraDeJuros.Calcular();
 

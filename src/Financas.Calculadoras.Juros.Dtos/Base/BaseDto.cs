@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Financas.Calculadoras.Juros.Dtos.Base
 {
@@ -21,5 +22,7 @@ namespace Financas.Calculadoras.Juros.Dtos.Base
         {
             foreach (var error in errors) AddError(error);
         }
+
+        public bool IsValid() => !Errors.Any();
     }
 }

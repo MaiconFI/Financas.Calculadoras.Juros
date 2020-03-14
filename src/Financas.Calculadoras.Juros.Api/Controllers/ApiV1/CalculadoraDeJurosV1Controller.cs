@@ -18,7 +18,7 @@ namespace Financas.Calculadoras.Juros.Api.Controllers.ApiV1
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAsync(CalcularJurosQuery calcularJurosQuery, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetAsync([FromQuery]CalcularJurosQuery calcularJurosQuery, CancellationToken cancellationToken)
         {
             return TratarRetorno(await _mediator.Send(calcularJurosQuery, cancellationToken));
         }
