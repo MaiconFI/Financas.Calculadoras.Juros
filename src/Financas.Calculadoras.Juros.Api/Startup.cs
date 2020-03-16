@@ -106,7 +106,7 @@ namespace Financas.Calculadoras.Juros.Api
 
         private static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy() =>
             HttpPolicyExtensions.HandleTransientHttpError()
-                .OrResult(msg => msg.StatusCode == HttpStatusCode.BadRequest)
+                .OrResult(msg => msg.StatusCode == HttpStatusCode.NotFound)
                 .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(Math.Pow(3, retryAttempt)));
     }
 }
