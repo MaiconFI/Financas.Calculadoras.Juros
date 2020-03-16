@@ -10,6 +10,7 @@ namespace Financas.Calculadoras.Juros.Queries.Mappers
         public CalculadoraDeJurosQueriesProfile()
         {
             CreateMap<CalculadoraDeJuros, CalculoDeJurosDto>().ConvertUsing<CalculadoraDeJurosToCalculoDeJurosDtoConverter>();
+            CreateMap<CalculadoraDeJurosDto, CalculadoraDeJuros>().ConvertUsing<CalculadoraDeJurosDtoToCalculadoraDeJurosConverter>();
             CreateMap<TaxaDeJurosDto, CalculoDeJurosDto>().ConvertUsing<TaxaDeJurosDtoToCalculoDeJurosDtoConverter>();
         }
     }

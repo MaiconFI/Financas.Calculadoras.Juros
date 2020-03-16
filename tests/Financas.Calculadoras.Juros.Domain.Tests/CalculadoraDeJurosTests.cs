@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using Financas.Calculadoras.Juros.Domain.Builders;
+using Xunit;
 
 namespace Financas.Calculadoras.Juros.Domain.Tests
 {
@@ -8,7 +9,12 @@ namespace Financas.Calculadoras.Juros.Domain.Tests
         public void CalculadoraDeJuros_DeveCalcularOJuros()
         {
             var resultadoEsperado = 105.10M;
-            var calculadoraDeJuros = new CalculadoraDeJuros(valorInicial: 100, meses: 5, taxaDeJuros: 0.01M);
+            var calculadoraDeJurosBuilder = new CalculadoraDeJurosBuilder()
+                .WithValorInicial(100)
+                .WithMeses(5)
+                .WithTaxaDeJuros(0.01M);
+
+            var calculadoraDeJuros = calculadoraDeJurosBuilder.Build();
             calculadoraDeJuros.Calcular();
 
             Assert.Equal(resultadoEsperado, calculadoraDeJuros.Resultado);
@@ -17,7 +23,12 @@ namespace Financas.Calculadoras.Juros.Domain.Tests
         [Fact]
         public void CalculadoraDeJuros_DeveConterErrosQuandoAQuantidadeDeMesesMesesForIgualAZero()
         {
-            var calculadoraDeJuros = new CalculadoraDeJuros(valorInicial: 100, meses: 0, taxaDeJuros: 0.01M);
+            var calculadoraDeJurosBuilder = new CalculadoraDeJurosBuilder()
+                .WithValorInicial(100)
+                .WithMeses(0)
+                .WithTaxaDeJuros(0.01M);
+
+            var calculadoraDeJuros = calculadoraDeJurosBuilder.Build();
 
             Assert.False(calculadoraDeJuros.IsValid());
         }
@@ -25,7 +36,12 @@ namespace Financas.Calculadoras.Juros.Domain.Tests
         [Fact]
         public void CalculadoraDeJuros_DeveConterErrosQuandoATaxaDeJurosForMenorQueZero()
         {
-            var calculadoraDeJuros = new CalculadoraDeJuros(valorInicial: 100, meses: 5, taxaDeJuros: -0.01M);
+            var calculadoraDeJurosBuilder = new CalculadoraDeJurosBuilder()
+                .WithValorInicial(100)
+                .WithMeses(5)
+                .WithTaxaDeJuros(-0.01M);
+
+            var calculadoraDeJuros = calculadoraDeJurosBuilder.Build();
 
             Assert.False(calculadoraDeJuros.IsValid());
         }
@@ -33,7 +49,12 @@ namespace Financas.Calculadoras.Juros.Domain.Tests
         [Fact]
         public void CalculadoraDeJuros_DeveConterErrosQuandoOValorInicialForIgualAZero()
         {
-            var calculadoraDeJuros = new CalculadoraDeJuros(valorInicial: 0, meses: 5, taxaDeJuros: 0.01M);
+            var calculadoraDeJurosBuilder = new CalculadoraDeJurosBuilder()
+                .WithValorInicial(0)
+                .WithMeses(5)
+                .WithTaxaDeJuros(0.01M);
+
+            var calculadoraDeJuros = calculadoraDeJurosBuilder.Build();
 
             Assert.False(calculadoraDeJuros.IsValid());
         }

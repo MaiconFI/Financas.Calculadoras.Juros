@@ -26,7 +26,14 @@ namespace Financas.Calculadoras.Juros.Queries.CalculoDeJuros
             if (!taxaDeJurosDto.IsValid())
                 return _mapper.Map<CalculoDeJurosDto>(taxaDeJurosDto);
 
-            var calculadoraDeJuros = new CalculadoraDeJuros(request.ValorInicial, request.Meses, taxaDeJurosDto.Valor);
+            var calculadoraDeJurosDto = new CalculadoraDeJurosDto()
+            {
+                ValorInicial = request.ValorInicial,
+                Meses = request.Meses,
+                TaxaDeJuros = taxaDeJurosDto.Valor
+            };
+
+            var calculadoraDeJuros = _mapper.Map<CalculadoraDeJuros>(calculadoraDeJurosDto);
             calculadoraDeJuros.Calcular();
 
             return _mapper.Map<CalculoDeJurosDto>(calculadoraDeJuros);

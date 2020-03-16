@@ -4,7 +4,7 @@ namespace Financas.Calculadoras.Juros.Domain
 {
     public class CalculadoraDeJuros : Calculadora
     {
-        public CalculadoraDeJuros(decimal valorInicial, int meses, decimal taxaDeJuros)
+        internal CalculadoraDeJuros(decimal valorInicial, int meses, decimal taxaDeJuros)
         {
             ValidarValorInicial(valorInicial);
             ValidarMeses(meses);
